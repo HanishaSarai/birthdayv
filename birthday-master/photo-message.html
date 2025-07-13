@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Special Message for Vandana</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href='https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Poppins:wght@300;400;600&display=swap' rel='stylesheet'>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #000;
+      color: #2d3436;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    /* Hide the audio player */
+    audio {
+      display: none;
+    }
+
+    /* Slideshow */
+    .slideshow-container {
+      position: relative;
+      width: 100%;
+      height: 550px;
+      overflow: hidden;
+    }
+
+    .slide {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .slide.active {
+      opacity: 1;
+      z-index: 1;
+    }
+
+    .slide.portrait {
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-color: #111;
+    }
+
+    .caption {
+      position: absolute;
+      bottom: 40px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-family: 'Dancing Script', cursive;
+      font-size: 2rem;
+      color: #fff;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+      z-index: 2;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateX(-50%) translateY(20px); }
+      100% { opacity: 1; transform: translateX(-50%) translateY(0); }
+    }
+
+    /* Message Container */
+    .container {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(8px);
+      border-radius: 20px;
+      padding: 40px;
+      max-width: 800px;
+      width: 90%;
+      margin: 40px auto;
+      text-align: center;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+      z-index: 2;
+    }
+
+    .title {
+      font-family: 'Dancing Script', cursive;
+      font-size: 2.8rem;
+      font-weight: 700;
+      color: #ff6b6b;
+      margin-bottom: 30px;
+    }
+
+    .photo-frame {
+      width: 260px;
+      height: 260px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 6px solid #ffb6b6;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      margin: 20px 0;
+    }
+
+    .message-content {
+      margin-top: 30px;
+      padding: 20px;
+      background: #fff6f6;
+      border-radius: 15px;
+      box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .message-text {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: #2d3436;
+      margin-bottom: 15px;
+    }
+
+    .signature {
+      font-family: 'Dancing Script', cursive;
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: #d63031;
+      margin-top: 20px;
+    }
+
+    .back-button {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      background: rgba(255, 255, 255, 0.3);
+      color: #000;
+      padding: 10px 20px;
+      border-radius: 20px;
+      text-decoration: none;
+      font-weight: 600;
+      z-index: 5;
+    }
+
+    .back-button:hover {
+      background: rgba(255, 255, 255, 0.5);
+    }
+
+    @media (max-width: 768px) {
+      .caption {
+        font-size: 1.3rem;
+      }
+
+      .container {
+        padding: 30px 20px;
+      }
+
+      .photo-frame {
+        width: 180px;
+        height: 180px;
+      }
+
+      .title {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Background Music -->
+  <audio class="song" autoplay loop>
+    <source src="song.mp3" type="audio/mp3" />
+    Your browser does not support the audio element.
+  </audio>
+
+  <a href="index.html" class="back-button">← Back</a>
+
+  <!-- Slideshow Section -->
+  <div class="slideshow-container">
+    <div class="slide" style="background-image: url('v3.jpg');">
+      <div class="caption">Our First Pic Together 😄</div>
+    </div>
+    <div class="slide active" style="background-image: url('v1.jpg');">
+      <div class="caption">Unforgettable Days 🌸</div>
+    </div>
+    <div class="slide" style="background-image: url('v2.jpg');">
+      <div class="caption">💖</div>
+    </div>
+    <div class="slide portrait" style="background-image: url('v4.jpg');">
+      <div class="caption">Let's go on another Trip!! 🥹</div>
+    </div>
+  </div>
+
+  <!-- Message Section -->
+  <div class="container">
+    <h1 class="title">A Special Message for You ❤</h1>
+
+    <img src="vandanpic.jpg" alt="Beautiful Vandana" class="photo-frame">
+
+    <div class="message-content">
+      <p class="message-text"><strong>Dear Vandan,</strong></p>
+      <p class="message-text">🎂 May this new year of your life be filled with endless adventures, beautiful moments, dreams coming true, and love that surrounds you always.</p>
+      <p class="message-text">🌟 On this wonderful day, I want you to know how incredibly special you are to me. You will always be my closest friend — the best part of my college life 🫶</p>
+      <p class="message-text">You already know how much value you hold in my life. I don't know if I hold the same in yours, but I wish you'll always be my friend — sorry, "More than Friend" and we never become strangers. 🥹 I don't know from now on how our bond will be but whenever you need me just message me 💖</p>
+      <p class="message-text">I also wish this year you start again to believe in love — and maybe get a girlfriend 😉</p>
+      <p class="message-text">🌈 You deserve all the happiness, success, and wonderful surprises that life has to offer!</p>
+      <p class="message-text">🎊 <strong>Happy Birthday, Amazing Soul!</strong> 🎊</p>
+      <p>Once again, many many happy returns of the day charee 😚</p>
+
+      <div class="signature">
+        With all my love and best wishes,<br>
+        Your Best Friend Forever 💖✨
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript for slideshow -->
+  <script>
+    const slides = document.querySelectorAll('.slide');
+    let current = 0;
+
+    function showNextSlide() {
+      slides[current].classList.remove('active');
+      current = (current + 1) % slides.length;
+      slides[current].classList.add('active');
+    }
+
+    setInterval(showNextSlide, 3000); // Change slide every 4 seconds
+  </script>
+</body>
+</html>
